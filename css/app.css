@@ -113,7 +113,7 @@ article.card-article {
 }
 article.card-article img {
   width: 16rem;
-  height: 12rem;
+  height: 9rem;
   object-fit: cover;
 }
 article.card-article h2 {
