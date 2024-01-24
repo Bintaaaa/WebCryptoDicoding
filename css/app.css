@@ -69,6 +69,10 @@ button.go-download {
   color: white;
 }
 
+button.go-download:hover {
+  background-color: rgba(118, 171, 190, 0.9);
+}
+
 main {
   margin: 0;
   display: flex;
