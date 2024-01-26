@@ -156,3 +156,47 @@ main aside.home-article-right-side .home-article-relevan p {
   font-size: 1rem;
   margin: 0;
 }
+
+footer {
+  width: 100%;
+
+  margin: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+}
+
+footer h4 {
+  color: white;
+}
+
+footer p a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+footer p a:hover {
+  color: rgb(34, 155, 58);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+footer .cta-to-other-page {
+  flex: 1;
+  width: 100%;
+  max-width: 1450px;
+
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+footer #services {
+  margin: 5rem;
+}
+
+footer #about-us {
+  margin: 5rem;
+}
