@@ -5,22 +5,17 @@
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 p {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 400;
 }
 
-.image-rounded {
-  border-radius: 10%;
-  object-fit: cover;
-}
-
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Quicksand", sans-serif;
 
   margin: 0;
 
@@ -28,35 +23,81 @@ body {
   flex-direction: column;
 }
 
-section.hero {
+header.navbar-container {
+  padding-block: 1rem;
+
+  z-index: 9999;
+}
+
+header.navbar-container,
+section.hero,
+main {
   flex: 1;
+
   width: 100%;
   max-width: 1450px;
-
   margin-inline: auto;
   padding: 2rem 4rem;
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 
-section.hero .hero-left {
-  flex: 2;
-  padding: 2rem;
+header.navbar-container {
+  padding-block: 1rem;
+
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 9999;
 }
 
-section.hero .hero-right {
-  flex: 1;
-  padding: 2rem;
+header.navbar-container .logo img {
+  width: 100px;
 }
-section.hero .hero-right img {
-  width: 40rem;
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: rgb(168, 205, 170);
+  color: white;
+}
+
+#registrasi {
+  color: white;
+  background-color: rgb(65, 127, 67);
+}
+#registrasi:hover {
+  color: white;
+  background-color: rgb(168, 205, 170);
 }
 
 button.go-download {
   background-color: rgba(22, 157, 208, 0.9);
-  padding: 1rem 6rem;
+  padding: 1rem;
+  flex-flow: wrap;
 
   border: 3px solid transparent;
 
@@ -73,28 +114,19 @@ button.go-download:hover {
   background-color: rgba(118, 171, 190, 0.9);
 }
 
-main {
-  margin: 0;
+.hero {
   display: flex;
-  flex-direction: column;
-}
-main section.home {
-  width: 100%;
-  max-width: 1450px;
-  margin: 0;
-  padding: 2rem 4rem;
-
-  margin-inline: auto;
+  flex-direction: row;
 }
 
-main section.home h1 {
-  font-size: 4rem;
-  margin: 0;
+.hero img {
+  max-width: 100%;
 }
 
-main section.home-body {
+.home-body {
   display: flex;
-  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 main section.home-articles {
@@ -104,12 +136,11 @@ main section.home-articles {
   flex: 2;
 
   justify-content: space-between;
-
-  padding: 2rem;
 }
 
 article.card-article {
   width: 16rem;
+  border: 1px;
 }
 article.card-article img {
   width: 16rem;
@@ -131,46 +162,22 @@ main aside.home-article-right-side {
   padding: 2rem;
 }
 
-main aside.home-article-right-side .home-banner {
-  width: 5rem;
-  margin-bottom: 3rem;
-}
 main aside.home-article-right-side .home-banner img {
-  width: 20rem;
+  width: 100%;
   object-fit: cover;
 }
 
-main aside.home-article-right-side .home-article-relevan {
-  display: flex;
-  flex-direction: column;
-
-  margin: auto;
-}
-
-main aside.home-article-right-side .home-article-relevan h3 {
-  font-size: 1rem;
-  margin: 0;
-}
-
-main aside.home-article-right-side .home-article-relevan p {
-  font-size: 1rem;
-  margin: 0;
-}
-
-footer {
-  width: 100%;
-
-  margin: 0;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
+footer .cta-to-other-page {
+  background-color: rgb(33, 32, 32);
   padding: 2rem 4rem;
+
+  display: flex;
+  flex-direction: row;
 }
 
 footer h4 {
   color: white;
 }
-
 footer p a {
   color: white;
   text-decoration: none;
@@ -183,20 +190,43 @@ footer p a:hover {
   font-size: 1rem;
 }
 
-footer .cta-to-other-page {
-  flex: 1;
-  width: 100%;
-  max-width: 1450px;
-
-  margin-inline: auto;
-  display: flex;
-  flex-direction: row;
-}
-
 footer #services {
-  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
 }
 
 footer #about-us {
-  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  header.navbar-container {
+    flex-direction: column;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .home-body {
+    flex-direction: column;
+  }
 }
